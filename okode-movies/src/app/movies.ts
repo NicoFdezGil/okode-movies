@@ -1,4 +1,5 @@
 export interface Movie {
+    id: number;
     title: string;
     year: string;
     rated: string;
@@ -7,6 +8,7 @@ export interface Movie {
 }
 export const Movies = [
     {
+        id:1,
         title: 'guardians of the galaxy',
         year: '2017',
         rated: 'PG-13',
@@ -14,6 +16,7 @@ export const Movies = [
         runtime: '136 min'
     },
     {
+        id:2,
         title: 'Batman',
         year: '1989',
         rated: 'PG-13',

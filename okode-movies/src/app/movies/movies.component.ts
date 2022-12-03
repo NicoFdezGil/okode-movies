@@ -12,4 +12,7 @@ export class MoviesComponent implements OnInit{
   constructor(){}
   ngOnInit(): void {
   }
+  goDetails(){
+    window.open('/movie-details', '_blank');
+  }
 }

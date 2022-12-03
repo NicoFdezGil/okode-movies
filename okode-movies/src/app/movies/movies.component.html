@@ -1,12 +1,11 @@
 <h2>Movies</h2>
 <div *ngFor="let movie of movies">
     <h3>
-        <a [title]="movie.title">
+        <a 
+        [title]="movie.title"
+        [routerLink]="" (click)="goDetails()">
         {{movie.title}}
     </a>
     </h3>
-    <p>Year: {{movie.year}}</p>
-    <p>Rated: {{movie.rated}}</p>
-    <p>Released: {{movie.released}}</p>
-    <p>Runtime: {{movie.runtime}}</p>
 </div>
+<router-outlet></router-outlet>
