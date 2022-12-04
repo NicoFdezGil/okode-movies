@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Component, OnInit, Input } from '@angular/core';
+import { ActivatedRoute, Router, ParamMap } from '@angular/router';
 
 import { Movie, Movies } from '../movies';
 
@@ -9,13 +9,10 @@ import { Movie, Movies } from '../movies';
   styleUrls: ['./movie-details.component.css']
 })
 export class MovieDetailsComponent implements OnInit {
-  movie: Movie | undefined;
+  @Input() movieDetails: any;
 
   constructor(private route: ActivatedRoute) {}
-  ngOnInit(): void {
-    const routerParams = this.route.snapshot.paramMap;
-    const movieIdRoute = Number(routerParams.get('movieId'));
-
-    this.movie = Movies.find(movie => movie.id === movieIdRoute);
+  ngOnInit(): void{
+    console.warn(this.movieDetails);
   }
 }

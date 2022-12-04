@@ -3,9 +3,11 @@
     <h3>
         <a 
         [title]="movie.title"
-        [routerLink]="" (click)="goDetails()">
+        [routerLink]="['/movie-details', movie.title]"
+        target="_blank"
+        (click)="onSelect(movie)">
         {{movie.title}}
     </a>
     </h3>
 </div>
-<router-outlet></router-outlet>
+<app-movie-details [movieDetails]="currentMovie"></app-movie-details>
